@@ -73,7 +73,7 @@ function validateForm()
     {
         var regex = /^\S+@\S+\.\S+$/;
         if(regex.test(email) === false) {
-            printError("emailErr", "Please enter a valid email address");
+            printError("emailErr", "Please enter a valid email address,@ and . should be there");
         } else{
             printError("emailErr", "");
             emailErr = false;
