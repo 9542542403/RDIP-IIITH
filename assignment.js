@@ -153,3 +153,66 @@ function validateForm()
 
 
 //task4
+
+function survive() {
+    var n1 = Number(document.getElementById('num1').value);
+    var n2 = Number(document.getElementById('num2').value);
+    
+    n1 = n1 % 3;
+    n2 = n2 % 3;
+    var obj = {};
+    obj[0] = 'Human';
+    obj[1] = 'Cockroach';
+    obj[2] = 'Nuclear Bomb';
+    if(obj[n1] == 'Human'){
+        if(obj[n2] == 'Cockroach'){
+            document.getElementById('surresult').innerHTML = "HUMAN WON"
+            return false
+        }
+        else if(obj[n2] == 'Nuclear Bomb')
+        {
+            document.getElementById('surresult').innerHTML = "NUCLEAR BOMB WON"
+            return false
+        }
+        else
+        {
+            document.getElementById('surresult').innerHTML = "TIE"
+            return false
+        }
+    }
+    else if(obj[n1] == 'Cockroach')
+    {
+        if(obj[n2] == 'Human'){
+            document.getElementById('surresult').innerHTML = "HUMAN WON"
+            return false
+        }
+        else if(obj[n2] == 'Nuclear Bomb')
+        {
+            document.getElementById('surresult').innerHTML = "COCKROACH WON"
+            return false
+        }
+        else
+        {
+            document.getElementById('surresult').innerHTML = "TIE"
+            return false
+        }   
+    }
+    else 
+    {
+        if(obj[n2] == 'Cockroach'){
+            document.getElementById('surresult').innerHTML = "COCKROACH WON"
+            return false
+        }
+        else if(obj[n2] == 'Human')
+        {
+            document.getElementById('surresult').innerHTML = "NUCLEAR BOMB WON"
+            return false
+        }
+        else
+        {
+            document.getElementById('surresult').innerHTML = "TIE"
+            return false
+        }
+    }
+    
+}
