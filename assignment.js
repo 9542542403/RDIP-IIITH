@@ -97,3 +97,59 @@ function validateForm()
 
 
 //task3
+
+
+		function myFunction()
+		{
+			
+			var str = document.getElementById('txtbox').value;
+			var result = checkPalindrome(str);
+			alert('The Entered String "'+str +'" is "'+result+'"');
+		}
+		
+		function checkPalindrome(str)
+		{
+			var orignalStr; 
+			str = str.toLowerCase();
+			orignalStr = str;
+			
+			str = str.split('');
+            str = str.reverse();
+			str = str.join(''); 
+			
+			var reverseStr = str;
+			
+		ript>
+		function check2(){
+        var s1 = document.getElementById('check1').value;
+        var s2= document.getElementById('check2').value;
+        if (s1 == "") {
+        alert("String can't be blank");
+        return false;
+    }
+        if (s2 == "") {
+        alert("String can't be blank");
+        return false;
+    }
+        var sortStr1 = s1.split('').sort().join('');
+    var sortStr2 = s2.split('').sort().join('');
+        if(sortStr1 === sortStr2){
+            alert("Anagram");
+            return false;
+        }
+        else{
+            alert("not anagram");
+            return false;
+        }
+        
+    }
+						
+			if(orignalStr == reverseStr){
+				return 'true'; 
+			}else{
+				return 'false';
+			}
+		}
+
+
+//task4
